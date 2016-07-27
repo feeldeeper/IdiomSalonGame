@@ -20,7 +20,7 @@ class IdiomSalon extends CI_Controller
         if($deep>2)
             return array();
 
-        $data = $this->db->where("成语<>'{$word}'")->get("成语",0,10)->result_array();
+        $data = $this->db->where("成语<>'{$word}'")->get("成语",0,1000)->result_array();
         $child = array();
         $wide = 0;
         foreach($data as $item){
